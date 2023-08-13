@@ -22,14 +22,20 @@ router.get("/seed", asyncHandler(
 
 
 
-router.get("/",(req, res)=> {
-    res.send(sample_foods);
-})
+router.get("/",asyncHandler(
+    async(req, res)=> {
+        const foods = await FoodModel.find();
+        res.send(foods);
+    }
+))
 
-router.get("/:foodId",(req, res) => {
-    const foodId = req.params.foodId;
-    const food = sample_foods.find(food => food.id == foodId);
-    res.send(food);
-})
+router.get("/:foodId", asyncHandler(
+    async (req, res) => {
+        const food = await FoodModel.findById(req.params.foodId)
+        
+        res.send(food);
+    }
+
+))
 
 export default router;
