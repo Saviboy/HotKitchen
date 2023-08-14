@@ -18,6 +18,7 @@ import { TextInputComponent } from './components/partials/text-input/text-input.
 import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
     TextInputComponent,
     DefaultButtonComponent,
     RegisterPageComponent,
-    CheckoutPageComponent
+    CheckoutPageComponent,
+    OrderItemsListComponent
   ],
   imports: [
     BrowserModule,
