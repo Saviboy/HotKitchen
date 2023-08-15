@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 export interface User{
-    //id:string;
+    id:string;
     email:string;
     password:string;
     name:string;
@@ -25,5 +25,6 @@ export const UserSchema = new Schema<User>({
         virtuals: true
     }
 });
+
 
 export const UserModel = model<User>('user', UserSchema); 

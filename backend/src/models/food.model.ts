@@ -1,7 +1,7 @@
 import { Schema, model} from "mongoose";
 
 export interface Food{
-    //id:string;
+    id:string;
     name:string;
     price:number;
     tags: string[];

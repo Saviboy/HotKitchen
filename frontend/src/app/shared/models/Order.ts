@@ -1,7 +1,8 @@
 import { CartItem } from "./CartItem";
 
 export class Order{
-    id!:number;
+    
+    //id!:number;
     items!: CartItem[];
     totalPrice!:number;
     name!: string;
